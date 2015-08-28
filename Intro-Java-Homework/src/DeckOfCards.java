@@ -19,8 +19,8 @@ public class DeckOfCards {
                         PdfPTable table = new PdfPTable(4);
                         table.setWidthPercentage(100);
                         table.getDefaultCell().setFixedHeight(180);
-                       
-                        BaseFont baseFont = BaseFont.createFont("times.ttf", BaseFont.IDENTITY_H, true);
+
+                        BaseFont baseFont = BaseFont.createFont("c:/windows/fonts/times.ttf", BaseFont.IDENTITY_H, true);
                         Font black = new Font(baseFont, 60f, 0, BaseColor.BLACK);
                         Font red = new Font(baseFont, 60f, 0, BaseColor.RED);
                        
