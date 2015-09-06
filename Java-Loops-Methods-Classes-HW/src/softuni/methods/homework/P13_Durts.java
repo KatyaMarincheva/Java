@@ -3,6 +3,9 @@ package softuni.methods.homework;
 import java.util.Scanner;
 
 public class P13_Durts {
+	private static Rectangle vertical = new Rectangle();
+    private static Rectangle horizontal = new Rectangle();
+    
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
@@ -15,13 +18,13 @@ public class P13_Durts {
 		double rectVerticalY = y + r;
 		double rectVerticalWidth = r;
 		double rectVerticalHeight = 2 * r;
-		Rectangle vertical = new Rectangle(rectVerticalX, rectVerticalY, rectVerticalWidth, rectVerticalHeight);
+		vertical = new Rectangle(rectVerticalX, rectVerticalY, rectVerticalWidth, rectVerticalHeight);
 		
 		double rectHorizontalX = x - r;
 		double rectHorizontalY = y + r/2;
 		double rectHorizontalWidth = 2 * r;
 		double rectHorizontalHeight = r;
-		Rectangle horizontal = new Rectangle(rectHorizontalX, rectHorizontalY, rectHorizontalWidth, rectHorizontalHeight);
+		horizontal = new Rectangle(rectHorizontalX, rectHorizontalY, rectHorizontalWidth, rectHorizontalHeight);
 		
 		int n = scanner.nextInt();
 		for (int i = 0; i < n; i++) {
@@ -38,20 +41,24 @@ public class P13_Durts {
 		
 	}
 	
-	public static class Rectangle {
+	private static class Rectangle {
 	    
-		private double x;
+		private double x; 
 		private double y;
 		private double width;
 		private double height;
 		
-	    public Rectangle(double x, double y, double width, double height) {
+	    private Rectangle(double x, double y, double width, double height) {
 	        this.x = x;
 	        this.y = y;
 	        this.width = width;
 	        this.height = height;
 	    }
 	    
+		public Rectangle() {
+			this (0, 0, 0, 0);
+		}
+
 		public double getX() {
 			return x;
 		}
