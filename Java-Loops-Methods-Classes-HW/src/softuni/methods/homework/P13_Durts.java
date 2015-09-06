@@ -3,10 +3,11 @@ package softuni.methods.homework;
 import java.util.Scanner;
 
 public class P13_Durts {
-	private static Rectangle vertical = new Rectangle();
-    private static Rectangle horizontal = new Rectangle();
+	private static Rectangle vertical = new P13_Durts().new Rectangle();
+    private static Rectangle horizontal = new P13_Durts().new Rectangle();
     
 	public static void main(String[] args) {
+		
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
@@ -18,13 +19,13 @@ public class P13_Durts {
 		double rectVerticalY = y + r;
 		double rectVerticalWidth = r;
 		double rectVerticalHeight = 2 * r;
-		vertical = new Rectangle(rectVerticalX, rectVerticalY, rectVerticalWidth, rectVerticalHeight);
+		vertical = new P13_Durts().new Rectangle(rectVerticalX, rectVerticalY, rectVerticalWidth, rectVerticalHeight);
 		
 		double rectHorizontalX = x - r;
 		double rectHorizontalY = y + r/2;
 		double rectHorizontalWidth = 2 * r;
 		double rectHorizontalHeight = r;
-		horizontal = new Rectangle(rectHorizontalX, rectHorizontalY, rectHorizontalWidth, rectHorizontalHeight);
+		horizontal = new P13_Durts().new Rectangle(rectHorizontalX, rectHorizontalY, rectHorizontalWidth, rectHorizontalHeight);
 		
 		int n = scanner.nextInt();
 		for (int i = 0; i < n; i++) {
@@ -41,7 +42,7 @@ public class P13_Durts {
 		
 	}
 	
-	private static class Rectangle {
+	private class Rectangle {
 	    
 		private double x; 
 		private double y;
