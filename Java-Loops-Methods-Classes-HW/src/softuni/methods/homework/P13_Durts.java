@@ -55,43 +55,43 @@ public class P13_Durts {
 	        this.height = height;
 	    }
 	    
-		public Rectangle() {
+		private Rectangle() {
 			this (0, 0, 0, 0);
 		}
 
-		public double getX() {
+		private double getX() {
 			return x;
 		}
 		
-		public void setX(double x) {
+		private void setX(double x) {
 			this.x = x;
 		}
 		
-		public double getY() {
+		private double getY() {
 			return y;
 		}
 		
-		public void setY(double y) {
+		private void setY(double y) {
 			this.y = y;
 		}
 		
-		public double getWidth() {
+		private double getWidth() {
 			return width;
 		}
 		
-		public void setWidth(double width) {
+		private void setWidth(double width) {
 			this.width = width;
 		}
 		
-		public double getHeight() {
+		private double getHeight() {
 			return height;
 		}
 		
-		public void setHeight(double height) {
+		private void setHeight(double height) {
 			this.height = height;
 		}
 		
-	    public boolean contains(double x, double y) {
+		private boolean contains(double x, double y) {
 	    	
 	    	boolean isInside = y <= this.y && y >= this.y - this.height && x >= this.x && x <= this.x + this.width;
 	    	return isInside;
