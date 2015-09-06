@@ -14,6 +14,17 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class P11_Excel {
 	public static void main(String[] args) throws IOException {
 		
+		// the program needs:
+		// poi-3.12-20150511.jar
+		// (http://www.apache.org/dyn/closer.lua/poi/release/bin/poi-bin-3.12-20150511.zip)
+		// poi-ooxml-3.12.jar
+		// (http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml/3.12)
+		// poi-ooxml-schemas-3.12.jar
+		// (http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas/3.12-beta1)
+		// xmlbeans-2.6.0.jar
+		// (http://www.java2s.com/Code/Jar/x/Downloadxmlbeans260jar.htm)
+		// all too large to be submitted with the homework folder
+		
         Locale.setDefault(Locale.ROOT);
         FileInputStream input = null;
         

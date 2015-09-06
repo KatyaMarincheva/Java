@@ -15,6 +15,11 @@ public class P9_ListOfProducts {
 	
 	public static void main(String[] args) throws IOException {
 		
+		// the program needs com.google.guava_1.6.0.jar
+		// can be downloaded from here:
+		//http://www.java2s.com/Code/Jar/c/Downloadcomgoogleguava160jar.htm
+		// too large for the homework folder.....
+		
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		
