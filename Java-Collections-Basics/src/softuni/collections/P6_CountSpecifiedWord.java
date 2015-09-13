@@ -1,7 +1,7 @@
 package softuni.collections;
 
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class P6_CountSpecifiedWord {
 
@@ -16,7 +16,8 @@ public class P6_CountSpecifiedWord {
         System.out.println("Please, enter a word.");
         String needle = scanner.nextLine();
         
-		int count =  haystack.split(Pattern.quote(needle), -1).length - 1;
+        Long count = Arrays.stream(haystack.split("[\\W]+")).filter(s -> s.equals(needle)).count();
+
         System.out.println(count);
 	}
 }
